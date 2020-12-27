@@ -64,8 +64,8 @@ export default function App() {
       
     }}  initialRouteName="World">
         <Drawer.Screen name="World" component={WorldScreen} />
-        <Drawer.Screen name="CountryNav" component={CountryNav}/>
-        <Drawer.Screen name="FavouriteNav" component={FavouriteNav} />
+        <Drawer.Screen name="Country" component={CountryNav}/>
+        <Drawer.Screen name="Favourite" component={FavouriteNav} />
         
       </Drawer.Navigator>
   </NavigationContainer>
