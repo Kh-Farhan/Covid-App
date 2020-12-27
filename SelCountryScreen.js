@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View,Button,AsyncStorage } from 'react-native';
+import { StyleSheet, Text, View,Button,AsyncStorage,ScrollView } from 'react-native';
 import { Entypo  } from '@expo/vector-icons'; 
 export function SelCountryScreen({ navigation,route }) {
     const[name,setName]=useState(route.params.name==="United States"?"USA":route.params.name);
@@ -91,6 +91,7 @@ export function SelCountryScreen({ navigation,route }) {
 
     }}  style={{marginLeft:"4%"}}name="star" size={45} color="#104691" /> 
   return (
+	  <ScrollView>
       <View style={styles.container}>
       <View style={{flexDirection:"row"}}>
       <Text style={styles.Head}>{name}</Text>
@@ -100,6 +101,7 @@ export function SelCountryScreen({ navigation,route }) {
       <Text style={[styles.text2,{fontSize:35}]}>{population}</Text>
       {data!==undefined?dataView:null}
       </View>
+	  </ScrollView>
     );
   }
   const styles = StyleSheet.create({
