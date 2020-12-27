@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View,Button } from 'react-native';
+import { StyleSheet, Text, View,Button ,ScrollView} from 'react-native';
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 export function WorldScreen({ navigation }) {
@@ -53,12 +53,14 @@ export function WorldScreen({ navigation }) {
    </View>;
   
     return (
+        <ScrollView>
       <View style={styles.container}>
         <Text style={styles.Head}>World Statistics</Text>
         <Text style={styles.text}>Total Population:</Text>
       <Text style={[styles.text2,{fontSize:35}]}>{population}</Text>
       {data!==undefined?dataView:<ActivityIndicator size="large" color="#104691" />}
       </View>
+        </ScrollView>
     );
   }
   const styles = StyleSheet.create({
